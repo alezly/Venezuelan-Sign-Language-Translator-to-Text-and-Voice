@@ -1,0 +1,17 @@
+<div class="signCapture">
+  <div class="signCapture__buttons">
+    <button
+      [class.selected]="selected === 'camera'"
+      (click)="select('camera')"
+    >
+      Camera
+    </button>
+    <button
+      [class.selected]="selected === 'history'"
+      (click)="select('history')"
+    >
+      History
+    </button>
+  </div>
+</div>
+

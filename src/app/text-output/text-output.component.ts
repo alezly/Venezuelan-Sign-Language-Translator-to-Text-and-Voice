@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { ToggleSwitchComponent } from '../toggle-switch/toggle-switch.component';
 
 @Component({
   selector: 'app-text-output',
-  imports: [],
+  imports: [ToggleSwitchComponent],
   templateUrl: './text-output.component.html',
   styleUrl: './text-output.component.scss'
 })

@@ -1,9 +1,6 @@
 <div class="signCapture">
-  <div class="signCapture__buttons">
-    <button
-      [class.selected]="selected === 'camera'"
-      (click)="select('camera')"
-    >
+  <div class="signCapture__header">
+    <button [class.selected]="selected === 'camera'" (click)="select('camera')">
       Camera
     </button>
     <button
@@ -13,5 +10,23 @@
       History
     </button>
   </div>
-</div>
+  <div class="signCapture__body">
+    @if (selected === 'camera') {
+    <div class="signCapture__body__camera">
+      <app-sign-camera></app-sign-camera>
+    </div>
+    } @else if (selected === 'history') {
+    <div class="signCapture__body__history">
+      <div class="signCapture__body__history">
+        <p>History</p>
+      </div>
+      <!-- <app-sign-history></app-sign-history> -->
+    </div>
 
+    }
+  </div>
+  <div class="signCapture__footer">
+    <button class="signCapture__footer__button__start" (click)="activarCamara()">Start</button>
+    <button class="signCapture__footer__button__reset" (click)="desactivarCamara()">Reset</button>
+  </div>
+</div>

@@ -1,0 +1,31 @@
+<div class="userCamera">
+  @if (cameraEnabled){
+    <video #videoElement autoplay playsinline muted></video>
+  }@else{
+  <svg
+    width="120"
+    height="120"
+    viewBox="0 0 120 140"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <!-- Cámara -->
+    <rect x="20" y="40" width="80" height="50" rx="10" fill="#cccccc" />
+    <rect x="80" y="55" width="20" height="20" rx="4" fill="#cccccc" />
+    <circle cx="60" cy="65" r="12" fill="#b3b3b3" />
+    <rect x="45" y="30" width="30" height="15" rx="7" fill="#cccccc" />
+    <!-- Texto -->
+    <text
+      x="60"
+      y="125"
+      text-anchor="middle"
+      font-size="18"
+      fill="#cccccc"
+      font-family="Arial, sans-serif"
+    >
+      Camera is off
+    </text>
+  </svg>
+
+  }
+</div>

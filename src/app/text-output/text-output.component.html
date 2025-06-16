@@ -1,5 +1,5 @@
 <div class="textOutput">
-  <div class="signCapture__buttons">
+  <div class="textOutput__header">
     <button
       [class.selected]="selected === 'Text output'"
       (click)="select('Text output')"
@@ -13,6 +13,20 @@
       Voice output
     </button>
   </div>
+  <div class="textOutput__body">
+    @if( selected === 'Text output') {
+    <div class="textOutput__body__text">
+      <p>Translated text will appear here...</p>
+    </div>
+    } @else if( selected === 'Voice output') {
+    <div class="textOutput__body__voice">
+      <p>Voice output will be played here...</p>
+    </div>
+
+    <app-toggle-switch></app-toggle-switch>
+    }
+  </div>
+  <div class="textOutput__footer">
+    <button class="textOutput__footer__button__copy">Copy</button>
+  </div>
 </div>
-
-

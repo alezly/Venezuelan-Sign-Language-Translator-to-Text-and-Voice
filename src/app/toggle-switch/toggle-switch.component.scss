@@ -1,0 +1,49 @@
+/* Contenedor principal para alinear el interruptor y el texto */
+.container {
+  display: flex;
+  align-items: center;
+  gap: 12px; /* Espacio entre el interruptor y el texto */
+}
+
+/* El fondo del interruptor (el rectángulo negro con bordes redondeados) */
+.toggle-switch {
+  position: relative;
+  width: 52px;
+  height: 28px;
+  background-color: #000; /* Fondo negro como pediste */
+  border-radius: 14px; /* Para que sea un "píldora" */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* El círculo blanco que se mueve */
+.toggle-circle {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 22px;
+  height: 22px;
+  background-color: #fff; /* Círculo blanco */
+  border-radius: 50%; /* Para que sea un círculo perfecto */
+  transition: transform 0.3s ease; /* La animación de movimiento */
+}
+
+/* ----- La Magia del Toggle ----- */
+
+/* Cuando el interruptor tiene la clase 'active', cambiamos el color de fondo */
+/* Un color verde o azul es común para indicar que está "encendido" */
+.toggle-switch.active {
+  background-color: #007bff; /* Puedes cambiar este color */
+}
+
+/* Y lo más importante: movemos el círculo a la derecha */
+.toggle-switch.active .toggle-circle {
+  transform: translateX(24px); /* Mueve el círculo horizontalmente */
+}
+
+/* Estilo para el texto */
+.label {
+  font-family: sans-serif;
+  font-size: 16px;
+  user-select: none; /* Evita que el texto se seleccione al hacer clic */
+}

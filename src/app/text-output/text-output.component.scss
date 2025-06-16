@@ -1,6 +1,7 @@
 .textOutput {
   height: 80vh;
-  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
   border-radius: 0.5rem;
   width: 45vw;
   display: flex;
@@ -8,7 +9,7 @@
   padding: 1rem;
 }
 
-.signCapture__buttons {
+.textOutput__header {
   display: flex;
   width: 50%;
   height: 2.5rem;
@@ -17,7 +18,7 @@
   overflow: hidden;
 }
 
-.signCapture__buttons button {
+.textOutput__header button {
   flex: 1;
   border: none;
   background-color: #f4f4f5;
@@ -28,7 +29,48 @@
   transition: background-color 0.3s;
 }
 
-.signCapture__buttons button.selected {
+.textOutput__header button.selected {
   background-color: #333;
   color: white;
+}
+
+.textOutput__body {
+  height: 100%;
+}
+.textOutput__body__text,
+.textOutput__body__voice {
+  margin-top: 1rem;
+  height: 50%;
+  background: #f4f4f5;
+  border-radius: 0.5rem;
+  border: 1px solid #dbdcdc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #a1a1a1;
+}
+.textOutput__body__voice{
+  margin-bottom: 1rem;
+}
+.textOutput__footer {
+  display: flex;
+  width: 100%;
+  height: max-content;
+  justify-content: flex-end;
+}
+
+.textOutput__footer__button__copy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 2rem;
+  border: 1px solid #333333;
+  border-radius: 0.4rem;
+  width: 23%;
+  background: #ffffff;
+  color: #333333;
+  cursor: pointer;
+}
+.textOutput__footer__button__copy:hover {
+  background: #f4f4f5;
 }

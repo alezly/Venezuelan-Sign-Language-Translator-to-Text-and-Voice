@@ -1,4 +1,4 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, ViewChild, Output, EventEmitter } from '@angular/core';
 import { SignCameraComponent } from '../sign-camera/sign-camera.component'
 
 @Component({
@@ -9,13 +9,16 @@ import { SignCameraComponent } from '../sign-camera/sign-camera.component'
 })
 export class SignCaptureComponent {
   @ViewChild(SignCameraComponent) userCameraComponent!: SignCameraComponent;
-
+  @Output() translationChanged = new EventEmitter<string>();
   selected: string = 'camera';
+
+  onTranslationChanged(value: string) {
+    this.translationChanged.emit(value);
+  }
 
   select(name: string) {
     this.selected = name;
   }
-
 
   activarCamara() {
     this.userCameraComponent.startCamera();

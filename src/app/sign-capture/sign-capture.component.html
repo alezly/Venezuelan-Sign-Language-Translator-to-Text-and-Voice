@@ -13,7 +13,7 @@
   <div class="signCapture__body">
     @if (selected === 'camera') {
     <div class="signCapture__body__camera">
-      <app-sign-camera></app-sign-camera>
+      <app-sign-camera (translationChanged)="onTranslationChanged($event)"></app-sign-camera>
     </div>
     } @else if (selected === 'history') {
     <div class="signCapture__body__history">

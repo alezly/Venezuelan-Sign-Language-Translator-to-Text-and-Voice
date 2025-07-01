@@ -11,4 +11,10 @@ import { TextOutputComponent } from "./text-output/text-output.component";
 })
 export class AppComponent {
   title = 'LSV-to-text-and-speech';
+
+  translation: string = '';
+
+  onTranslationChanged(value: string) {
+    this.translation = value;
+  }
 }

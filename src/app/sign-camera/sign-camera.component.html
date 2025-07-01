@@ -1,6 +1,6 @@
 <div class="userCamera">
   @if (cameraEnabled){
-    <video #videoElement autoplay playsinline muted></video>
+    <video #videoElement autoplay playsinline muted class="webcam-feed"></video>
   }@else{
   <svg
     width="120"
@@ -26,6 +26,5 @@
       Camera is off
     </text>
   </svg>
-
   }
 </div>

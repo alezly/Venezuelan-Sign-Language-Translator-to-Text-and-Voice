@@ -4,8 +4,8 @@
       <h1>Sing language translator</h1>
     </div>
     <div class="translator__content">
-      <app-sign-capture></app-sign-capture>
-      <app-text-output></app-text-output>
+      <app-sign-capture (translationChanged)="onTranslationChanged($event)"></app-sign-capture>
+      <app-text-output [translation]="translation"></app-text-output>
     </div>
   </div>
 </main>
